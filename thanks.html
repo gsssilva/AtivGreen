@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens espaciais</title>
+    <script src="JavaScript.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Space Grotesk' rel='stylesheet'>
+</head>
+
+<body>
+
+    <dialog open class="modal">
+
+        <div class="tks">
+            <a id="tks">Obrigado por participar <br> da votação! 🚀</a>
+        </div>
+
+
+        <img id="selectedImage" src="" class="imgTKS" alt="Imagem selecionada">
+        <br><br><br>
+        <div class="description">
+            <a class="cred">Créditos</a>
+        </div>
+
+        <div id="imageDescription" class="description"></div>
+
+        <br><br><Br>
+
+        <footer>
+            <div class="modal">
+                <a href="index.html"><button id="forPage1" class="return">Recomeçar</button></a>
+            </div>
+        </footer>
+    </dialog>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const imageSrc = urlParams.get('imageSrc');
+            const imageDesc = urlParams.get('imageDesc');
+
+            if (imageSrc) {
+                document.getElementById('selectedImage').src = decodeURIComponent(imageSrc);
+            }
+
+            if (imageDesc) {
+                const descElement = document.getElementById('imageDescription');
+                descElement.textContent = decodeURIComponent(imageDesc);
+            }
+        });
+    </script>
+
+</body>
+
+</html>

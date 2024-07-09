@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens espaciais</title>
+    <script src="JavaScript.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Space Grotesk' rel='stylesheet'>
+</head>
+
+<body>
+
+    <dialog open class="modal">
+        <div class="image-container">
+            <img src="images/imagensEspeciais.jpg" id="imgBanner" alt="Banner com texto">
+            <div class="image-text">UMA SELEÇÃO DE FOTOS DA NASA</div>
+            <div class="image-text" id="imgEspeciais">Imagens <br> espaciais</div>
+        </div>
+
+        <div id="frase">
+            <a>🚀 Escolha sua imagem favorita entre as opções abaixo:</a>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <img src="images/d1.jpg" id="image1" class="image" alt="img1" onclick="selectImage(this)">
+            </div>
+            <div class="column">
+                <img src="images/d2.jpg" id="image2" class="image" alt="img2" onclick="selectImage(this)">
+            </div>
+            <div class="column">
+                <img src="images/d3.jpg" id="image3" class="image" alt="img3" onclick="selectImage(this)">
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="images/e1.jpg" id="image4" class="image" alt="img4" onclick="selectImage(this)">
+            </div>
+            <div class="column">
+                <img src="images/e2.jpg" id="image5" class="image" alt="img5" onclick="selectImage(this)">
+            </div>
+            <div class="column">
+                <img src="images/e3.jpg" id="image6" class="image" alt="img6" onclick="selectImage(this)">
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="images/f1.jpg" id="image7" class="image" alt="img7" onclick="selectImage(this)">
+            </div>
+            <div class="column">
+                <img src="images/f2.jpg" id="image8" class="image" alt="img8" onclick="selectImage(this)">
+            </div>
+            <div class="column">
+                <img src="images/f3.jpg" id="image9" class="image" alt="img9" onclick="selectImage(this)">
+            </div>
+        </div>
+
+        <div id="pages">
+            <a>Páginas</a>
+        </div>
+
+        <a href="index.html"><button id="page1" class="pagesSelect" onclick="selectPage(1)">1</button></a>
+        <a href="index2.html"><button id="page2" class="pagesSelect" onclick="selectPage(2)">2</button></a>
+
+        <br><br><br><br>
+
+        <footer>
+            <div class="modal">
+                <button id="buttonConfirm" disabled>Confirmar voto</button>
+            </div>
+        </footer>
+    </dialog>
+
+</body>
+
+</html>
